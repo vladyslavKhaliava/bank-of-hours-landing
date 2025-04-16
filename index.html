@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/futura-condensed-extra" rel="stylesheet">
+    <title>Bank of Hours Quote</title>
+    <style>
+
+        /* Box sizing reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        /* Remove default margins and paddings */
+        body, h1, h2, h3, h4, h5, h6, p,
+        ul, ol, figure, blockquote, dl, dd {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Anchor styles */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Make images responsive */
+        img, picture, video, canvas, svg {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Remove default button and input styles */
+        input, button, textarea, select {
+            font: inherit;
+            color: inherit;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        /* Remove animations for users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Tables */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        /* Form elements spacing and full width */
+        input, textarea, select, button {
+            display: inline-block;
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        p {
+            font-family: "DM Sans", sans-serif;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            background: #ECF1F3;
+            color: #070707;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1860px;
+            margin: auto;
+            padding-inline: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section__title-main {
+            font-size: 128px;
+            font-weight: 700;
+            line-height: 1;
+            font-family: 'Futura Condensed Extra', sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .section__title {
+            font-size: 128px;
+            font-weight: 700;
+            line-height: 1;
+            font-family: 'Futura Condensed Extra', sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .section__title-small {
+            font-size: 64px;
+            margin-bottom: 56px;
+        }
+
+        .section__subtitle {
+            font-size: 48px;
+            font-weight: 400;
+            font-family: "DM Sans", sans-serif;
+            letter-spacing: -2.5px;
+            line-height: 1;
+        }
+
+        /*`Section Hero`*/
+
+        .section--hero {
+            height: 100vw;
+            background-image: url("assets/images/hero-bg.png");
+            background-repeat: no-repeat;
+            background-size: 70% 100%;
+            background-position: center right;
+            position: relative;
+            overflow: hidden;
+            align-content: center;
+        }
+
+        .section--hero_logo {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+
+        .section--hero_circle {
+            position: absolute;
+            border: 1px solid rgba(7, 7, 7, 0.00);
+            border-radius: 50%;
+            background: #ECF1F3;
+            box-shadow: 19px 57px 132px 0px rgba(0, 0, 0, 0.38);
+            width: 2200px;
+            height: 2050px;
+            z-index: 0;
+            top: -2.5%;
+            left: -40%;
+        }
+
+        .section--hero_copyright {
+            display: flex;
+            position: absolute;
+            gap: 120px;
+            z-index: 1;
+            left: 50px;
+            bottom: 50px;
+        }
+
+        .section--hero_copyright p {
+            font-size: 24px;
+            letter-spacing: -1.2px;
+        }
+
+        /*`Section About`*/
+
+        .section--about {
+            padding-top: 200px;
+            padding-bottom: 100px;
+        }
+
+        .section--about p {
+            font-size: 48px;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        .section--services {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .service-list__item .list__item-title {
+            color: #421EB7;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -2.4px;
+            text-transform: uppercase;
+            font-family: 'Futura Condensed Extra', sans-serif;
+            padding-bottom: 8px;
+        }
+
+        .service-list__item .list__item-text {
+            color: #070707;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -1.92px;
+        }
+
+        /*`Section Customers`*/
+
+        .section--customers {
+            padding-block: 100px;
+        }
+
+        .customer-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding-top: 160px;
+        }
+
+        .customer-list .customer-list__item {
+            padding-block: 41px;
+            border-radius: 24px;
+            background: #fff;
+        }
+
+        .customer-list .customer-list__item:nth-child(1) {
+            padding-inline: 120px;
+        }
+
+        .customer-list .customer-list__item:nth-child(2) {
+            padding-inline: 120px;
+        }
+
+        .customer-list .customer-list__item:nth-child(3) {
+            padding-inline: 53px;
+        }
+
+        .customer-list .customer-list__item:nth-child(4) {
+            padding-inline: 81px;
+        }
+
+        .customer-list .customer-list__item:nth-child(5) {
+            padding-inline: 79px;
+        }
+
+        .customer-list .customer-list__item:nth-child(6) {
+            padding-inline: 42px;
+        }
+
+        .customer-list .customer-list__item:nth-child(7) {
+            padding-inline: 96px;
+        }
+
+        .customer-list .customer-list__item:nth-child(8) {
+            padding-inline: 66px;
+        }
+
+        .customer-list .customer-list__item:nth-child(9) {
+            padding-inline: 120px;
+        }
+
+        .customer-list .customer-list__item:nth-child(10) {
+            padding-inline: 24px;
+        }
+
+        .customer-list .customer-list__item:nth-child(11) {
+            padding-inline: 91px;
+        }
+
+        .customer-list .customer-list__item:nth-child(12) {
+            padding-inline: 103px;
+        }
+
+        .customer-list .customer-list__item:nth-child(13) {
+            padding-inline: 79px;
+        }
+
+        .customer-list .customer-list__item:nth-child(14) {
+            padding-inline: 15px;
+        }
+
+        .customer-list .customer-list__item:nth-child(15) {
+            padding-inline: 105px;
+        }
+
+        .customer-list .customer-list__item:nth-child(16) {
+            padding-inline: 49px;
+        }
+
+        .customer-list .customer-list__item:nth-child(17) {
+            padding-inline: 87px;
+        }
+
+        .customer-list .customer-list__item:nth-child(18) {
+            padding-inline: 91px;
+        }
+
+        .customer-list .customer-list__item:nth-child(19) {
+            padding-inline: 52px;
+        }
+
+        .customer-list .customer-list__item:nth-child(20) {
+            padding-inline: 36px;
+        }
+
+        .customer-list .customer-list__item:nth-child(21) {
+            padding-inline: 14px;
+        }
+
+        .customer-list .customer-list__item:nth-child(22) {
+            padding-inline: 53px;
+        }
+
+        .customer-list .customer-list__item:nth-child(23) {
+            padding-inline: 12px;
+        }
+
+        .customer-list .customer-list__item:nth-child(24) {
+            padding-inline: 50px;
+        }
+
+        .customer-list .customer-list__item:nth-child(25) {
+            padding-inline: 16px;
+        }
+
+        .customer-list .customer-list__item:nth-child(26) {
+            padding-inline: 37px;
+        }
+
+        .customer-list .customer-list__item:nth-child(27) {
+            padding-inline: 68px;
+        }
+
+        .customer-list .customer-list__item:nth-child(28) {
+            padding-inline: 52px;
+        }
+
+        .customer-list .customer-list__item:nth-child(29) {
+            padding-inline: 53px;
+        }
+
+        .customer-list .customer-list__item:nth-child(30) {
+            padding-inline: 50px;
+        }
+
+        .customer-list .customer-list__item:nth-child(31) {
+            padding-inline: 59px;
+        }
+
+        .customer-list .customer-list__item:nth-child(32) {
+            padding-inline: 59px;
+        }
+
+        .customer-list .customer-list__item:nth-child(33) {
+            padding-inline: 48px;
+        }
+
+        .customer-list .customer-list__item:nth-child(34) {
+            padding-inline: 48px;
+        }
+
+        .customer-list .customer-list__item:nth-child(35) {
+            padding-inline: 58px;
+        }
+
+        .customer-list .customer-list__item:nth-child(36) {
+            padding-inline: 67px;
+        }
+
+        .customer-list .customer-list__item:nth-child(37) {
+            padding-inline: 65px;
+        }
+
+        .customer-list .customer-list__item:nth-child(38) {
+            padding-inline: 64px;
+        }
+
+        .customer-list .customer-list__item:nth-child(39) {
+            padding-inline: 64px;
+        }
+
+        .customer-list .customer-list__item:nth-child(40) {
+            padding-inline: 44px;
+        }
+
+        .customer-list .customer-list__item:nth-child(41) {
+            padding-inline: 36px;
+        }
+
+        .customer-list .customer-list__item:nth-child(42) {
+            padding-inline: 74px;
+        }
+
+        .customer-list .customer-list__item:nth-child(43) {
+            padding-inline: 82px;
+        }
+
+        .customer-list .customer-list__item:nth-child(44) {
+            padding-inline: 49px;
+        }
+
+        .customer-list .customer-list__item:nth-child(45) {
+            padding-inline: 79px;
+        }
+
+        .customer-list .customer-list__item:nth-child(46) {
+            padding-inline: 62px;
+        }
+
+        /*`Section Study Cases`*/
+
+        .section--study-cases {
+            padding-block: 100px;
+        }
+
+        .study-cases {
+            padding-top: 96px;
+        }
+
+        .study-cases__item {
+            background: #fff;
+            padding-block: 110px;
+            border-radius: 24px;
+            flex: 1 1 calc(33.333% - 24px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: center;
+        }
+
+        .study-cases__item img {
+            transition: all 0.7s ease-in-out;
+        }
+
+        .study-cases__item:hover img {
+            transform: scale(1.4);
+        }
+
+        .study-cases__item-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-list,
+        .study-cases {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .service-list__item {
+            background: #fff;
+            padding: 24px;
+            border-radius: 24px;
+            flex: 1 1 calc(50% - 24px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        /*`Section Scope`*/
+
+        .section--scope {
+            padding-block: 100px;
+        }
+
+        /*`Section SLA`*/
+
+        .section--sla {
+            padding-block: 60px;
+        }
+
+        /*`Section Priority Levels`*/
+
+        .section--priority-levels {
+            padding-block: 60px;
+        }
+
+        .section--priority-levels__list {
+            padding-left: 60px;
+        }
+
+        .section--priority-levels__list li {
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            line-height: 1.3;
+            padding-bottom: 32px;
+        }
+
+        .section--priority-levels__list li:last-child {
+            padding-bottom: 0;
+        }
+
+        .section--priority-levels__list li .text--bold {
+            font-weight: 600;
+        }
+
+        /*`Section Budget`*/
+
+        .section--budget {
+            padding-top: 140px;
+            padding-bottom: 100px;
+        }
+
+        .section--budget-text {
+            padding-bottom: 112px;
+        }
+
+        /*`Section Payment`*/
+
+        .section--payment {
+            padding-block: 100px;
+        }
+
+        .payment-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 64px;
+            background-color: #fff;
+        }
+
+        .pricing-table th,
+        .pricing-table td,
+        .payment-table th,
+        .payment-table td {
+            border: 1px solid #DEE3EE;
+            padding: 16px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .start__cell {
+            text-align: start !important;
+        }
+
+        .bold__cell {
+            font-weight: 700;
+            font-size: 36px !important;
+            text-transform: uppercase;
+            font-family: 'Futura Condensed Extra', sans-serif;
+        }
+
+        .pb-56 {
+            padding-bottom: 56px;
+        }
+
+        /*`Section Terms`*/
+
+        .section--terms {
+            padding-block: 100px;
+        }
+
+        .section--terms .section--priority-levels__list {
+            padding-bottom: 120px;
+        }
+
+        .section--terms .section--priority-levels__list:last-child {
+            padding-bottom: 0;
+        }
+
+        /*`Section Obligations`*/
+
+        .section--obligations {
+            padding-block: 100px;
+        }
+
+        .section--obligations .section--priority-levels__list {
+            padding-bottom: 120px;
+        }
+
+        .section--obligations .section--priority-levels__list:last-child {
+            padding-bottom: 0;
+        }
+
+        .coop-text {
+            font-family: 'Futura Condensed Extra', sans-serif;
+            font-size: 36px;
+            color: #070707;
+            font-weight: 700;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        /*`Section Fines`*/
+
+        .section--fines-text {
+            padding-top: 80px;
+            padding-bottom: 160px;
+        }
+
+        .section--fines-text p {
+            padding-bottom: 60px;
+        }
+
+        .section--fines-text p:last-child {
+            padding-bottom: 0;
+        }
+
+        .section--fines-signatures {
+            display: flex;
+            justify-content: flex-end;
+            gap: 40px;
+            padding-bottom: 200px;
+        }
+
+        .signatures__block {
+            max-width: 590px;
+            width: 100%;
+        }
+
+        .section--fines-signatures input {
+            border-bottom: 1px solid #797979;
+            padding: 16px 0;
+            margin-bottom: 40px;
+        }
+
+        .section--fines-signatures input::placeholder {
+            color: #797979;
+            font-size: 20px;
+        }
+
+        .signatures__info .signatures__title, .signatures__info .signatures__name {
+            color: #070707;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -1.92px;
+            padding-bottom: 16px;
+        }
+
+        .signatures__info .signatures__position {
+            color: #070707;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -1.92px;
+        }
+
+        .section--fines-copyright {
+            padding-bottom: 140px;
+            text-align: center;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        /*`Responsive`*/
+
+        @media screen and (max-width: 1860px) {
+            .customer-list .customer-list__item {
+                padding-inline: 56px !important;
+                flex: 1 1 calc(20% - 24px);
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 1620px) {
+            .section--hero_circle {
+                top: -10.5%;
+                left: -75%;
+            }
+        }
+
+        @media screen and (max-width: 1280px) {
+
+            .section--hero_circle {
+                top: -18%;
+                left: -105%;
+            }
+
+            p {
+                font-size: 32px;
+            }
+
+            .section--about p {
+                font-size: 32px;
+            }
+
+            .section__title-main {
+                font-size: 96px;
+            }
+
+            .section__title {
+                font-size: 96px;
+            }
+
+            .section__title-small {
+                font-size: 56px;
+            }
+
+            .section__subtitle {
+                font-size: 36px;
+                letter-spacing: -1.5px;
+            }
+
+            .section--about {
+                padding-top: 100px;
+                padding-bottom: 60px;
+            }
+
+            .section--services {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            .section--customers, .section--study-cases, .section--scope, .section--payment, .section--terms, .section--obligations {
+                padding-block: 60px;
+            }
+
+            .section--budget {
+                padding-top: 80px;
+                padding-bottom: 60px;
+            }
+
+            .section--priority-levels__list li {
+                font-size: 36px;
+            }
+        }
+
+        @media screen and (max-width: 980px) {
+            .section--hero_circle {
+                top: -50%;
+                left: -150%;
+            }
+
+            .customer-list .customer-list__item {
+                padding-inline: 24px !important;
+                padding-block: 20px;
+                flex: 1 1 calc(33.33% - 24px);
+            }
+
+            .study-cases__item {
+                padding-block: 40px;
+            }
+
+            p {
+                font-size: 24px;
+            }
+
+            .section--about p {
+                font-size: 24px;
+            }
+
+            .section__title-main {
+                font-size: 64px;
+            }
+
+            .section__title {
+                font-size: 64px;
+            }
+
+            .section__title-small {
+                font-size: 48px;
+            }
+
+            .section__subtitle {
+                font-size: 24px;
+            }
+
+            .bold__cell {
+                font-size: 24px !important;
+            }
+
+            .section--terms .section--priority-levels__list {
+                padding-bottom: 60px;
+            }
+            .section--obligations .section--priority-levels__list {
+                padding-bottom: 60px;
+            }
+
+            .section--fines-signatures {
+                padding-bottom: 100px;
+            }
+
+            .section--fines-copyright {
+                max-width: 80%;
+                padding-bottom: 60px;
+            }
+            .section--budget-text {
+                padding-bottom: 40px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .section--hero_circle {
+                top: -85%;
+                left: -225%;
+            }
+            .section--hero_logo {
+                left: 20px;
+            }
+            .section--hero_copyright {
+                left: 20px;
+                gap: 80px;
+            }
+
+            .list__item-title {
+                font-size: 32px !important;
+            }
+            .list__item-text {
+                font-size: 24px !important;
+            }
+            .study-cases__item {
+                padding-inline: 16px;
+                padding-block: 24px;
+            }
+
+            .section--about {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+
+            .section--services {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .section--customers, .section--study-cases, .section--scope, .section--payment, .section--terms, .section--sla, .section--obligations {
+                padding-block: 40px;
+            }
+
+            .section--budget {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+
+            .section--priority-levels__list li {
+                font-size: 24px;
+            }
+
+            .section--priority-levels__list {
+                padding-left: 40px;
+            }
+
+            .customer-list, .study-cases {
+                padding-top: 80px;
+            }
+        }
+
+        @media screen and (max-width: 560px) {
+            .section--hero {
+                height: 90vh;
+            }
+
+            .section--hero_circle {
+                top: -13%;
+                left: -192%;
+                width: 1200px;
+                height: 1050px;
+            }
+            .section--hero_copyright {
+                gap: 30px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .section--about p {
+                font-size: 20px;
+            }
+
+            .section__title-main {
+                font-size: 48px;
+            }
+
+            .section__title {
+                font-size: 48px;
+            }
+
+            .section__title-small {
+                font-size: 32px;
+            }
+
+            .section__subtitle {
+                font-size: 20px;
+            }
+
+            .bold__cell {
+                font-size: 16px !important;
+            }
+
+            .list__item-title {
+                font-size: 24px !important;
+            }
+            .list__item-text {
+                font-size: 20px !important;
+            }
+
+            .section--about {
+                padding-top: 40px;
+                padding-bottom: 20px;
+            }
+
+            .section--services {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            .section--customers, .section--study-cases, .section--scope, .section--payment, .section--terms, .section--sla, .section--obligations {
+                padding-block: 30px;
+            }
+
+            .section--budget {
+                padding-top: 30px;
+                padding-bottom: 20px;
+            }
+
+            .section--priority-levels__list li {
+                font-size: 20px;
+            }
+
+            .section--priority-levels__list {
+                padding-left: 20px;
+            }
+
+            .customer-list, .study-cases {
+                padding-top: 40px;
+            }
+
+            .service-list__item {
+                flex: 100%;
+            }
+            .customer-list .customer-list__item {
+                padding-inline: 16px !important;
+                padding-block: 16px;
+                flex: 1 1 calc(50% - 24px);
+            }
+            .study-cases__item {
+                flex: 1 1 calc(50% - 24px);
+                padding-block: 16px;
+            }
+            .section--priority-levels {
+                padding-block: 30px;
+            }
+
+            .section--terms .section--priority-levels__list {
+                padding-bottom: 30px;
+            }
+            .section--obligations .section--priority-levels__list {
+                padding-bottom: 30px;
+            }
+
+            .section--fines-text {
+                padding-top: 30px;
+                padding-bottom: 40px;
+            }
+            .section--fines-signatures {
+                flex-direction: column;
+            }
+
+            .signatures__info .signatures__title, .signatures__info .signatures__name, .signatures__info .signatures__position {
+                font-size: 20px;
+            }
+
+            .pricing-table th, .pricing-table td, .payment-table th, .payment-table td {
+                padding: 4px;
+                font-size: 12px;
+            }
+            .bold__cell {
+                font-size: 12px !important;
+            }
+
+            .section--hero_copyright p {
+                font-size: 20px;
+            }
+
+            .payment-table {
+                margin-top: 40px;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            .section--hero_circle {
+                top: -35%;
+                left: -233%;
+            }
+        }
+    </style>
+</head>
+<body>
+<main class="main-content">
+    <section class="section section--hero">
+        <div class="section--hero_logo">
+            <img src="assets/images/LogoGroup.svg" alt="logo">
+        </div>
+        <div class="container">
+            <h1 class="section__title-main">[SERVICE NAME]</br> Bank of Hours Quote</h1>
+            <p class="section__subtitle">Elevate the visual identity</p>
+        </div>
+        <div class="section--hero_copyright">
+            <p>Kessel Liran</p>
+            <p>December 05, 2024</p>
+        </div>
+        <div class="section--hero_circle">
+        </div>
+    </section>
+
+    <section class="section section--about">
+        <div class="container">
+            <h2 class="section__title">About Us</h2>
+            <p>Group 107 is a full-service development public company that brings together innovators, tech experts, and
+                global companies to turn creative ideas into thriving businesses. Our team merges design prowess with
+                deep
+                tech knowledge to tackle challenges from both user and business angles, delivering solutions that
+                enhance
+                user experience and create value. We have the solutions to turn your ideas and current products into
+                something more than imagined, without complications, that makes it more user-friendly.<br>Group 107
+                specializes
+                in outsourcing services that help businesses grow and reduce costs.</p>
+        </div>
+    </section>
+
+    <section class="section section--services">
+        <div class="container">
+            <h2 class="section__title section__title-small">Our Comprehensive Services Include:</h2>
+            <div class="service-list">
+                <div class="service-list__item">
+                    <div class="list__item-title">
+                        Offshore Software Development
+                    </div>
+                    <div class="list__item-text">
+                        Provides the best dedicated teams of offshore software developers, data analyzers, digital
+                        marketing wizards and many more.
+                    </div>
+                </div>
+                <div class="service-list__item">
+                    <div class="list__item-title">
+                        Web Development
+                    </div>
+                    <div class="list__item-text">
+                        Specializing in customized WordPress solutions, as well as a wide range of both FrontEnd and
+                        BackEnd technologies.
+                    </div>
+                </div>
+                <div class="service-list__item">
+                    <div class="list__item-title">
+                        DevOps Services
+                    </div>
+                    <div class="list__item-text">
+                        Includes services such as continuous integration and delivery, infrastructure automation, and
+                        cloud migration.
+                    </div>
+                </div>
+                <div class="service-list__item">
+                    <div class="list__item-title">
+                        Custom Web Solutions
+                    </div>
+                    <div class="list__item-text">
+                        Providing customized solutions helping businesses streamline their operations, improve
+                        efficiency, and achieve their business goals.
+                    </div>
+                </div>
+                <div class="service-list__item">
+                    <div class="list__item-title">
+                        Design Services
+                    </div>
+                    <div class="list__item-text">
+                        Powered by own resources and amazing partners, we create that WOW experience by UI/UX, motion
+                        and 3D video design.
+                    </div>
+                </div>
+                <div class="service-list__item">
+                    <div class="list__item-title">
+                        Software testing
+                    </div>
+                    <div class="list__item-text">
+                        Proficient in automated and manual quality assurance services, to guarantee smooth and reliable
+                        user experiences.
+                    </div>
+                </div>
+                <div class="service-list__item">
+                    <div class="list__item-title">
+                        Accessibility Compliance Services
+                    </div>
+                    <div class="list__item-text">
+                        Leading company in Israel for consulting, testing, and implementing accessibility according to
+                        international
+                        standards.
+                    </div>
+                </div>
+                <div class="service-list__item">
+                    <div class="list__item-title">
+                        Cyber Security Services
+                    </div>
+                    <div class="list__item-text">
+                        Our experts combined with cutting-edge technologies, allows us to predict, prevent, detect, and
+                        respond to the most advanced and aggressive cyber-attacks.
+                    </div>
+                </div>
+                <div class="service-list__item">
+                    <div class="list__item-title">
+                        App Development
+                    </div>
+                    <div class="list__item-text">
+                        Experienced in iOS and Android development, as well as web development technologies such as
+                        React and
+                        Angular.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--customers">
+        <div class="container">
+            <h2 class="section__title">Customers</h2>
+            <p class="section__subtitle">Here at GROUP 107 Ltd., our customers are our number one priority.<br>Over 1000
+                companies trusted us and scaled up.</p>
+            <div class="customer-list">
+                <div class="customer-list__item">
+                    <img src="assets/images/cus1.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus2.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus3.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus4.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus5.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus6.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus7.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus8.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus9.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus10.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus11.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus12.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus13.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus14.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus15.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus16.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus17.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus18.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus19.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus20.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus21.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus22.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus23.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus24.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus25.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus26.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus27.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus28.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus3.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus29.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus30.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus31.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus32.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus33.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus34.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus35.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus36.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus37.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus38.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus39.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus40.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus41.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus42.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus43.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus44.svg" alt="customer-logo">
+                </div>
+                <div class="customer-list__item">
+                    <img src="assets/images/cus45.svg" alt="customer-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--study-cases">
+        <div class="container">
+            <h2 class="section__title">Study Cases</h2>
+            <p class="section__subtitle">When it comes to website development sometimes too many words may come in the
+                way, when all you need to communicate are visuals.</p>
+            <div class="study-cases">
+                <a class="study-cases__item" href="https://www.ezbob.com/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cus3.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://www.novami.com/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cus7.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://www.priority-software.com/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cus12.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://evergent.com/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cus13.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://ryzebeyond.com/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas1.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://dynamo.fyi/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas2.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://www.simplex3d.com/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cus17.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://www.savvy.security/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas3.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://ahoy.insure/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cus21.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://www.routeperfect.com/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas4.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://www.htafc.co.il/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas5.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="#" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas6.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://superplay.co/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas7.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://rango-atelier.com/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas8.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://www.blings.io/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas9.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://www.catonetworks.com/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas10.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://mpcheckhealth.com/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas11.svg" alt="case-logo">
+                    </div>
+                </a>
+                <a class="study-cases__item" href="https://www.falkordb.com/" target="_blank">
+                    <div class="study-cases__item-wrapper">
+                        <img src="assets/images/cas12.svg" alt="case-logo">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--scope">
+        <div class="container">
+            <h2 class="section__title">Scope and Services Description</h2>
+            <p>Group 107 plans to implement Scope of Work which includes the DevOps Services on the Bank of hours
+                cooperation model.<br> A detailed description of the tasks with an approximate estimate of the time
+                required to complete them should be attached as an appendix to this proposal if applicable. The minimum
+                number of hours to initiate work is 20 hours.<br>
+                The hours actually spent on performing the tasks will be indicated in an additional report that will be
+                sent to the Client after the completion of these tasks.<br>
+                Significant deviations in time should be agreed with the Client in advance.</p>
+        </div>
+    </section>
+
+    <section class="section section--sla">
+        <div class="container">
+            <h2 class="section__title">SLA</h2>
+            <p>All requests shall only be accepted during working days and hours, which are defined as Monday to Friday,
+                9:00 to 19:00, except for previously announced national holidays, which will be communicated to the
+                client in advance. The list of national holidays shall be shared with the client by the Group 107
+                Project Manager.<br> All requests shall be acknowledged and assigned a priority level by the Group 107
+                Project Manager within one business day of receipt.</p>
+        </div>
+    </section>
+
+    <section class="section section--priority-levels">
+        <div class="container">
+            <h2 class="section__title section__title-small">The priority levels shall be defined as follows:</h2>
+            <ul class="section--priority-levels__list">
+                <li><span class="text--bold">Critical:</span> website down or malfunctioning</li>
+                <li><span class="text--bold">High:</span> Issues that impact the functionality of the project or the
+                    user experience shall be addressed within 24 hours of request submission.
+                </li>
+                <li><span class="text--bold">Medium:</span> Issues that affect project performance, but are not critical
+                    or high priority, shall be addressed within 36 hours of request submission.
+                </li>
+                <li><span class="text--bold">Low:</span> Issues that have a minor impact on project performance, such as
+                    cosmetic changes or minor modifications, shall be addressed within 48 hours of request submission.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section--budget">
+        <div class="container">
+            <h2 class="section__title" style="max-width: 90%">Budget and Payment Terms</h2>
+            <p class="section--budget-text">Client makes a 100% prepayment based on an approximate estimate of the time
+                required to perform tasks or the minimum number of hours to initiate work. The detailed report with the
+                hours spent and remaining hours from the purchased Bank of hours will be sent to the Client after the
+                approved scope of tasks is completed. Every next purchase of the Bank of hours should precede the work
+                start and include minimum 20 hours.</p>
+            <h2 class="section__title section__title-small">The following pricing** is applied to the Bank of
+                hours:</h2>
+            <ul class="section--priority-levels__list">
+                <li>for the Bank of less than <span class="text--bold">50 hours</span>, hourly rate is <span
+                        class="text--bold">65 USD.</span></li>
+                <li>for the Bank of more than <span class="text--bold">50 hours</span>, hourly rate is <span
+                        class="text--bold">65 USD.</span></li>
+                <li>every next Bank refill minimum is <span class="text--bold">20 hours.</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section--payment">
+        <div class="container">
+            <h2 class="section__title">Terms of Payment</h2>
+            <p class="section__subtitle">100% prepayment.</p>
+            <table class="payment-table">
+                <thead class="payment-table__head">
+                <tr class="payment-table__row payment-table__row--head">
+                    <th class="payment-table__cell payment-table__cell--head start__cell bold__cell">Services</th>
+                    <th class="payment-table__cell payment-table__cell--head bold__cell">Price</th>
+                    <th class="payment-table__cell payment-table__cell--head bold__cell">Qty</th>
+                    <th class="payment-table__cell payment-table__cell--head bold__cell">Discount</th>
+                    <th class="payment-table__cell payment-table__cell--head bold__cell">Total</th>
+                    <th class="payment-table__cell payment-table__cell--head bold__cell">After Discount</th>
+                </tr>
+                </thead>
+                <tbody class="payment-table__body">
+                <tr class="payment-table__row">
+                    <td class="payment-table__cell start__cell">
+                        <strong>DevOps services (Maksym Yaremko)</strong><br>
+                        <span class="payment-table__desc">Bank of hours (excl. 17% VAT)</span>
+                    </td>
+                    <td class="payment-table__cell">$144.00</td>
+                    <td class="payment-table__cell">$144.00</td>
+                    <td class="payment-table__cell">$144.00</td>
+                    <td class="payment-table__cell">$144.00</td>
+                    <td class="payment-table__cell">$144.00</td>
+                </tr>
+                <tr class="payment-table__row">
+                    <td class="payment-table__cell start__cell">
+                        <strong>DevOps services (Maksym Yaremko)</strong><br>
+                        <span class="payment-table__desc">Bank of hours (excl. 17% VAT)</span>
+                    </td>
+                    <td class="payment-table__cell">$144.00</td>
+                    <td class="payment-table__cell">$144.00</td>
+                    <td class="payment-table__cell">$144.00</td>
+                    <td class="payment-table__cell">$144.00</td>
+                    <td class="payment-table__cell">$144.00</td>
+                </tr>
+                </tbody>
+                <tfoot class="payment-table__foot">
+                <tr class="payment-table__row payment-table__row--total">
+                    <td class="payment-table__cell start__cell bold__cell" colspan="4"><strong>Total</strong></td>
+                    <td class="payment-table__cell"><strong>$144.00</strong></td>
+                    <td class="payment-table__cell"><strong>$144.00</strong></td>
+                </tr>
+                </tfoot>
+            </table>
+
+        </div>
+    </section>
+
+    <section class="section section--terms">
+        <div class="container">
+            <h2 class="section__title">Terms and<br> Conditions</h2>
+            <p class="section__title section__title-small">Risks and Assumptions:</p>
+            <p class="pb-56"><b>We identified a few non-technical risks, that may affect the scope and impact the
+                provided estimations:</b></p>
+            <ul class="section--priority-levels__list">
+                <li>System documentation is limited or not available.</li>
+            </ul>
+            <p class="pb-56"><b>During the estimation process we made next assumptions:</b></p>
+            <ul class="section--priority-levels__list">
+                <li>Main stakeholders are available for communication by the rules defined in the communication plan.
+                </li>
+                <li>Detailed scope and tasks decomposition is not provided by the client.</li>
+                <li>Detailed flows are not described and approved by the client.</li>
+                <li>All 3d party integration related questions will be resolved with the appropriate software support
+                    team in a timely manner.
+                </li>
+            </ul>
+            <p class="section__title section__title-small">Limitations:</p>
+            <ul class="section--priority-levels__list">
+                <li>This proposal doesn't include the Servers, Hosting costs and services, which are assumed to be done
+                    on the Client's side
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section--obligations">
+        <div class="container">
+            <h2 class="section__title">Company’s rights<br> and obligations</h2>
+            <p class="section__title section__title-small">Rights:</p>
+            <ul class="section--priority-levels__list">
+                <li>Request all necessary details about scope/idea, documentation or any other possible requirements
+                    from the Client;
+                </li>
+                <li>Request meetings, conference calls/calls or any other convenient ways of communication with Client
+                    to discuss/provide information regarding the tasks.
+                </li>
+            </ul>
+            <p class="section__title section__title-small">Obligations:</p>
+            <ul class="section--priority-levels__list">
+                <li>Before the Proposal is signed and agreed upon, provide all necessary information about the work to
+                    be performed, including materials and cost.
+                </li>
+                <li>Company is not responsible for third parties’ restrictions.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section--obligations">
+        <div class="container">
+            <h2 class="section__title">Client’s rights<br> and obligations</h2>
+            <p class="section__title section__title-small">Rights:</p>
+            <ul class="section--priority-levels__list">
+                <li>Communicate with Company representatives within Company’s working hours, or during agreed
+                    hours/days.
+                </li>
+                <li>Ask questions about any details of provided services/ updates/ recommendations.
+                </li>
+                <li>Request the information regarding the tasks before or during the development process.</li>
+                <li>Pause/end development process by informing the Company via email beforehand (not less than 2
+                    weeks).
+                </li>
+                <li>Request to change to the tasks or items included, add new team members, and define priorities.</li>
+                <li>Comment and/or inform of unmet needs.</li>
+                <li>Participate in team meetings.</li>
+                <li>Follow scope changes and control processes.</li>
+            </ul>
+            <p class="section__title section__title-small">Obligations:</p>
+            <ul class="section--priority-levels__list">
+                <li>Provide all necessary information needed for project development in time (not more than 2-3 days
+                    delay).
+                </li>
+                <li>Provide detailed requirements; participate in requirements determination process.</li>
+                <li>Review and Approve Requirements and/or Design.</li>
+                <li>Assist with the testing process.</li>
+                <li>Provide payments upon an agreed estimated budget.</li>
+            </ul>
+            <p class="coop-text">FAILURE TO FOLLOW THESE EXPECTATIONS MIGHT RESULT IN TERMINATION OF THE COOPERATION</p>
+        </div>
+    </section>
+
+    <section class="section section--fines">
+        <div class="container">
+            <h2 class="section__title">Fines and Cost<br> Policy</h2>
+            <ul class="section--priority-levels__list">
+                <li>Company’s cost estimation is based on the development time calculated at a rate as shown in the
+                    estimated budget.
+                </li>
+                <li>Client receives invoices based on agreed estimated budget. If any invoice is not paid due, the
+                    Company may suspend provision of services without liability or penalty until final resolution of the
+                    matter.
+                </li>
+            </ul>
+            <div class="section--fines-text">
+                <p>This Proposal, together with the following Attachments, constitute the entire Agreement between the
+                    parties with respect to the subject matter hereof, and as of the date this Proposal is executed by
+                    both Parties, shall supersede any previous agreements or understandings, written or oral, between
+                    the Parties in regards to the subject matter hereof. All modifications to the applicable
+                    Compensation arrangement shall be in writing and signed by both Parties and are the additions to the
+                    terms of this Proposal.</p>
+                <p>The Proposal shall commence on <span class="text--bold">Not yet accepted.</span></p>
+                <p>The total cost of the Proposal is <span class="text--bold">$4,050.00.</span></p>
+                <p>The timeline for this project shall be <span class="text--bold">[six weeks].</span></p>
+            </div>
+            <div class="section--fines-signatures">
+                <div class="signatures__block">
+                    <input type="text" placeholder="Signature">
+                    <div class="signatures__info">
+                        <div class="signatures__title">Title</div>
+                        <div class="signatures__name">Name</div>
+                        <div class="signatures__position">Delivery Operations Manager On behalf of GROUP 107 Ltd.</div>
+                    </div>
+                </div>
+                <div class="signatures__block">
+                    <input type="text" placeholder="Signature">
+                    <div class="signatures__info">
+                        <div class="signatures__title">Title</div>
+                        <div class="signatures__name">Name</div>
+                        <div class="signatures__position">Viewz</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section--fines-copyright">
+                <p class="section__title section__title-small">We look forward to working with you!</p>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
