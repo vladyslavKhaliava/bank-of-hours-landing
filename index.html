@@ -735,8 +735,10 @@
             }
 
             .customer-list .customer-list__item {
-                padding-inline: 24px !important;
-                padding-block: 20px;
+                padding-left: 24px !important;
+                padding-right: 24px !important;
+                padding-top: 20px;
+                padding-bottom: 20px;
                 flex: 1 1 calc(33.33% - 24px);
             }
 
@@ -775,6 +777,7 @@
             .section--terms .section--priority-levels__list {
                 padding-bottom: 60px;
             }
+
             .section--obligations .section--priority-levels__list {
                 padding-bottom: 60px;
             }
@@ -787,56 +790,108 @@
                 max-width: 80%;
                 padding-bottom: 60px;
             }
+
             .section--budget-text {
                 padding-bottom: 40px;
             }
         }
 
         @media screen and (max-width: 768px) {
-            .section--hero_circle {
-                top: -85%;
-                left: -225%;
+            .section--hero {
+                height: 600px;
             }
+
+            .section--hero_circle {
+                top: -16%;
+                left: -55%;
+                width: 800px;
+                height: 800px;
+            }
+
             .section--hero_logo {
                 left: 20px;
             }
+
             .section--hero_copyright {
                 left: 20px;
-                gap: 80px;
+                gap: 60px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .section--about p {
+                font-size: 14px;
+            }
+
+            .section__title-main {
+                font-size: 24px;
+            }
+
+            .section__title {
+                font-size: 24px;
+                margin-bottom: 32px;
+            }
+
+            .section__title-small {
+                font-size: 18px;
+                margin-bottom: 24px;
+            }
+
+            .section__subtitle {
+                font-size: 16px;
+            }
+
+            .bold__cell {
+                font-size: 14px !important;
             }
 
             .list__item-title {
-                font-size: 32px !important;
+                font-size: 18px !important;
             }
+
             .list__item-text {
-                font-size: 24px !important;
+                font-size: 14px !important;
             }
+
             .study-cases__item {
-                padding-inline: 16px;
-                padding-block: 24px;
+                padding-left: 16px;
+                padding-right: 16px;
+                padding-top: 24px;
+                padding-bottom: 24px;
             }
 
             .section--about {
-                padding-top: 60px;
-                padding-bottom: 40px;
+                padding-top: 40px;
+                padding-bottom: 25px;
             }
 
             .section--services {
-                padding-top: 40px;
-                padding-bottom: 40px;
+                padding-top: 25px;
+                padding-bottom: 25px;
             }
 
-            .section--customers, .section--study-cases, .section--scope, .section--payment, .section--terms, .section--sla, .section--obligations {
-                padding-block: 40px;
+            .section--customers, .section--study-cases, .section--scope, .section--payment, .section--terms, .section--sla, .section--obligations, .section--priority-levels {
+                padding-block: 25px;
             }
 
             .section--budget {
-                padding-top: 60px;
-                padding-bottom: 40px;
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+
+            .payment-table {
+                margin-top: 32px;
             }
 
             .section--priority-levels__list li {
-                font-size: 24px;
+                font-size: 14px;
+                padding-bottom: 20px;
+            }
+
+            .section--budget-text {
+                padding-bottom: 24px;
             }
 
             .section--priority-levels__list {
@@ -844,7 +899,55 @@
             }
 
             .customer-list, .study-cases {
-                padding-top: 80px;
+                padding-top: 40px;
+            }
+
+            .section--hero_copyright p {
+                font-size: 14px;
+            }
+
+            .signatures__info .signatures__title, .signatures__info .signatures__name, .signatures__info .signatures__position {
+                font-size: 14px;
+            }
+
+            .pricing-table th, .pricing-table td, .payment-table th, .payment-table td {
+                padding: 4px;
+                font-size: 12px;
+            }
+
+            .bold__cell {
+                font-size: 12px !important;
+            }
+
+            .pb-56 {
+                padding-bottom: 18px;
+            }
+
+            .section--terms .section--priority-levels__list, .section--obligations .section--priority-levels__list{
+                padding-bottom: 20px;
+            }
+
+            .coop-text {
+                font-size: 16px;
+            }
+
+            .section--fines-text {
+                padding-top: 25px;
+                padding-bottom: 30px;
+            }
+            .section--fines-text p {
+                padding-bottom: 20px;
+            }
+
+            .section--fines-signatures input::placeholder {
+                font-size: 14px;
+            }
+
+            .section--fines-signatures {
+                padding-bottom: 25px;
+            }
+            .section--fines-copyright {
+                padding-bottom: 20px;
             }
         }
 
@@ -859,62 +962,9 @@
                 width: 1200px;
                 height: 1050px;
             }
+
             .section--hero_copyright {
                 gap: 30px;
-            }
-
-            p {
-                font-size: 20px;
-            }
-
-            .section--about p {
-                font-size: 20px;
-            }
-
-            .section__title-main {
-                font-size: 48px;
-            }
-
-            .section__title {
-                font-size: 48px;
-            }
-
-            .section__title-small {
-                font-size: 32px;
-            }
-
-            .section__subtitle {
-                font-size: 20px;
-            }
-
-            .bold__cell {
-                font-size: 16px !important;
-            }
-
-            .list__item-title {
-                font-size: 24px !important;
-            }
-            .list__item-text {
-                font-size: 20px !important;
-            }
-
-            .section--about {
-                padding-top: 40px;
-                padding-bottom: 20px;
-            }
-
-            .section--services {
-                padding-top: 30px;
-                padding-bottom: 30px;
-            }
-
-            .section--customers, .section--study-cases, .section--scope, .section--payment, .section--terms, .section--sla, .section--obligations {
-                padding-block: 30px;
-            }
-
-            .section--budget {
-                padding-top: 30px;
-                padding-bottom: 20px;
             }
 
             .section--priority-levels__list li {
@@ -925,55 +975,40 @@
                 padding-left: 20px;
             }
 
-            .customer-list, .study-cases {
-                padding-top: 40px;
-            }
-
             .service-list__item {
                 flex: 100%;
             }
+
             .customer-list .customer-list__item {
                 padding-inline: 16px !important;
                 padding-block: 16px;
                 flex: 1 1 calc(50% - 24px);
             }
+
             .study-cases__item {
                 flex: 1 1 calc(50% - 24px);
                 padding-block: 16px;
             }
+
             .section--priority-levels {
-                padding-block: 30px;
+                padding-block: 20px;
             }
 
             .section--terms .section--priority-levels__list {
-                padding-bottom: 30px;
+                padding-bottom: 20px;
             }
+
             .section--obligations .section--priority-levels__list {
-                padding-bottom: 30px;
+                padding-bottom: 20px;
             }
 
             .section--fines-text {
-                padding-top: 30px;
-                padding-bottom: 40px;
+                padding-top: 25px;
+                padding-bottom: 30px;
             }
+
             .section--fines-signatures {
                 flex-direction: column;
-            }
-
-            .signatures__info .signatures__title, .signatures__info .signatures__name, .signatures__info .signatures__position {
-                font-size: 20px;
-            }
-
-            .pricing-table th, .pricing-table td, .payment-table th, .payment-table td {
-                padding: 4px;
-                font-size: 12px;
-            }
-            .bold__cell {
-                font-size: 12px !important;
-            }
-
-            .section--hero_copyright p {
-                font-size: 20px;
             }
 
             .payment-table {
@@ -1120,142 +1155,188 @@
                 companies trusted us and scaled up.</p>
             <div class="customer-list">
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus1.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus1.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus2.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus2.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus3.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus3.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus4.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus4.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus5.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus5.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus6.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus6.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus7.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus7.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus8.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus8.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus9.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus9.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus10.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus10.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus11.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus11.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus12.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus12.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus13.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus13.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus14.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus14.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus15.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus15.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus16.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus16.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus17.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus17.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus18.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus18.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus19.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus19.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus20.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus20.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus21.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus21.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus22.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus22.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus23.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus23.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus24.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus24.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus25.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus25.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus26.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus26.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus27.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus27.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus28.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus28.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus3.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus3.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus29.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus29.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus30.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus30.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus31.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus31.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus32.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus32.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus33.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus33.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus34.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus34.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus35.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus35.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus36.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus36.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus37.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus37.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus38.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus38.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus39.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus39.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus40.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus40.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus41.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus41.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus42.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus42.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus43.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus43.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus44.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus44.svg"
+                         alt="customer-logo">
                 </div>
                 <div class="customer-list__item">
-                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus45.svg" alt="customer-logo">
+                    <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus45.svg"
+                         alt="customer-logo">
                 </div>
             </div>
         </div>
@@ -1269,92 +1350,110 @@
             <div class="study-cases">
                 <a class="study-cases__item" href="https://www.ezbob.com/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus3.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus3.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://www.novami.com/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus7.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus7.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://www.priority-software.com/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus12.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus12.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://evergent.com/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus13.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus13.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://ryzebeyond.com/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas1.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas1.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://dynamo.fyi/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas2.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas2.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://www.simplex3d.com/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus17.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus17.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://www.savvy.security/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas3.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas3.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://ahoy.insure/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus21.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cus21.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://www.routeperfect.com/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas4.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas4.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://www.htafc.co.il/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas5.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas5.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="#" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas6.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas6.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://superplay.co/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas7.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas7.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://rango-atelier.com/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas8.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas8.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://www.blings.io/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas9.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas9.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://www.catonetworks.com/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas10.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas10.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://mpcheckhealth.com/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas11.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas11.svg"
+                             alt="case-logo">
                     </div>
                 </a>
                 <a class="study-cases__item" href="https://www.falkordb.com/" target="_blank">
                     <div class="study-cases__item-wrapper">
-                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas12.svg" alt="case-logo">
+                        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/cas12.svg"
+                             alt="case-logo">
                     </div>
                 </a>
             </div>
