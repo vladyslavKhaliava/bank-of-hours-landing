@@ -134,7 +134,7 @@
 
         .section--hero {
             height: 100vw;
-            background-image: url("https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/hero-bg.png");
+            /*background-image: url("https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/hero-bg.png");*/
             background-repeat: no-repeat;
             background-size: 70% 100%;
             background-position: center right;
@@ -658,7 +658,8 @@
 
         @media screen and (max-width: 1860px) {
             .customer-list .customer-list__item {
-                padding-inline: 56px !important;
+                padding-left: 56px !important;
+                padding-right: 56px !important;
                 flex: 1 1 calc(20% - 24px);
                 display: flex;
                 justify-content: center;
@@ -951,6 +952,185 @@
             }
         }
 
+        @media print {
+
+            body {
+                background: #ECF1F3;
+            }
+
+            .section--hero {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background-image: url("https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/hero-bg.png");
+                background-size: 70% 100%;
+                background-repeat: no-repeat;
+                background-position: center right;
+            }
+
+            .section--hero {
+                height: 600px;
+            }
+
+            .section--hero_circle {
+                /*top: -16%;*/
+                top: -96px;
+                left: -407px;
+                /*left: -55%;*/
+                width: 800px;
+                height: 800px;
+            }
+
+            .section--hero_logo {
+                left: 20px;
+            }
+
+            .section--hero_copyright {
+                left: 20px;
+                gap: 60px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .section--about p {
+                font-size: 14px;
+            }
+
+            .section__title-main {
+                font-size: 24px;
+            }
+
+            .section__title {
+                font-size: 24px;
+                margin-bottom: 32px;
+            }
+
+            .section__title-small {
+                font-size: 18px;
+                margin-bottom: 24px;
+            }
+
+            .section__subtitle {
+                font-size: 16px;
+            }
+
+            .bold__cell {
+                font-size: 14px !important;
+            }
+
+            .list__item-title {
+                font-size: 18px !important;
+            }
+
+            .list__item-text {
+                font-size: 14px !important;
+            }
+
+            .study-cases__item {
+                padding-left: 16px;
+                padding-right: 16px;
+                padding-top: 24px;
+                padding-bottom: 24px;
+            }
+
+            .section--about {
+                padding-top: 40px;
+                padding-bottom: 25px;
+            }
+
+            .section--services {
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+
+            .section--customers, .section--study-cases, .section--scope, .section--payment, .section--terms, .section--sla, .section--obligations, .section--priority-levels {
+                padding-block: 25px;
+            }
+
+            .section--budget {
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+
+            .payment-table {
+                margin-top: 32px;
+            }
+
+            .section--priority-levels__list li {
+                font-size: 14px;
+                padding-bottom: 20px;
+            }
+
+            .section--budget-text {
+                padding-bottom: 24px;
+            }
+
+            .section--priority-levels__list {
+                padding-left: 40px;
+            }
+
+            .customer-list, .study-cases {
+                padding-top: 40px;
+            }
+
+            .section--hero_copyright p {
+                font-size: 14px;
+            }
+
+            .signatures__info .signatures__title, .signatures__info .signatures__name, .signatures__info .signatures__position {
+                font-size: 14px;
+            }
+
+            .pricing-table th, .pricing-table td, .payment-table th, .payment-table td {
+                padding: 4px;
+                font-size: 12px;
+            }
+
+            .customer-list .customer-list__item {
+                padding: 16px !important;
+                flex: 1 1 calc(33.333% - 24px) !important;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .bold__cell {
+                font-size: 12px !important;
+            }
+
+            .pb-56 {
+                padding-bottom: 18px;
+            }
+
+            .section--terms .section--priority-levels__list, .section--obligations .section--priority-levels__list{
+                padding-bottom: 20px;
+            }
+
+            .coop-text {
+                font-size: 16px;
+            }
+
+            .section--fines-text {
+                padding-top: 25px;
+                padding-bottom: 30px;
+            }
+            .section--fines-text p {
+                padding-bottom: 20px;
+            }
+
+            .section--fines-signatures input::placeholder {
+                font-size: 14px;
+            }
+
+            .section--fines-signatures {
+                padding-bottom: 25px;
+            }
+            .section--fines-copyright {
+                padding-bottom: 20px;
+            }
+        }
+
         @media screen and (max-width: 560px) {
             .section--hero {
                 height: 90vh;
@@ -980,8 +1160,10 @@
             }
 
             .customer-list .customer-list__item {
-                padding-inline: 16px !important;
-                padding-block: 16px;
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+                padding-bottom: 16px;
+                padding-top: 16px;
                 flex: 1 1 calc(50% - 24px);
             }
 
@@ -1022,11 +1204,27 @@
                 left: -233%;
             }
         }
+
+        .hero__bg-img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 70%;
+            z-index: 0;
+        }
+        /*.section--hero > *:not(.hero__bg-img) {*/
+        /*    position: relative;*/
+        /*    z-index: 1;*/
+        /*}*/
+
     </style>
 </head>
 <body>
 <main class="main-content">
     <section class="section section--hero">
+        <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/hero-bg.png" class="hero__bg-img" alt="">
+
         <div class="section--hero_logo">
             <img src="https://vladyslavkhaliava.github.io/bank-of-hours-landing/assets/images/LogoGroup.svg" alt="logo">
         </div>
